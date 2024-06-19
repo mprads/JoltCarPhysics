@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=3 uid="uid://mjlvw7ppiefq"]
+
+[ext_resource type="Script" path="res://GameObjects/Car/car.gd" id="1_qxkf3"]
+[ext_resource type="Script" path="res://GameObjects/Car/wheel.gd" id="2_pf2xc"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_molf0"]
+size = Vector3(1.5, 0.5, 3)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0hy6f"]
+size = Vector3(1.5, 0.5, 3)
+
+[node name="Car" type="RigidBody3D"]
+script = ExtResource("1_qxkf3")
+debug = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_molf0")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_0hy6f")
+
+[node name="WheelRaycasts" type="Node3D" parent="."]
+
+[node name="FrontLeftWheel" type="RayCast3D" parent="WheelRaycasts"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.75, 0, 1)
+script = ExtResource("2_pf2xc")
+
+[node name="FrontRightWheel" type="RayCast3D" parent="WheelRaycasts"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.75, 0, 1)
+script = ExtResource("2_pf2xc")
+
+[node name="RearLeftWheel" type="RayCast3D" parent="WheelRaycasts"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.75, 0, -1)
+script = ExtResource("2_pf2xc")
+
+[node name="RearRightWheel" type="RayCast3D" parent="WheelRaycasts"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.75, 0, -1)
+script = ExtResource("2_pf2xc")
