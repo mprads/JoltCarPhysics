@@ -36,7 +36,7 @@ func _process(delta):
 	var direction = Vector3(
 		float(Input.is_physical_key_pressed(KEY_D)) - float(Input.is_physical_key_pressed(KEY_A)),
 		float(Input.is_physical_key_pressed(KEY_E)) - float(Input.is_physical_key_pressed(KEY_Q)), 
-		float(Input.is_physical_key_pressed(KEY_S)) - float(Input.is_physical_key_pressed(KEY_W))
+		float(Input.is_physical_key_pressed(KEY_1)) - float(Input.is_physical_key_pressed(KEY_2))
 	).normalized()
 	
 	if Input.is_physical_key_pressed(KEY_SHIFT): # boost

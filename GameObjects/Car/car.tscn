@@ -24,10 +24,12 @@ shape = SubResource("BoxShape3D_0hy6f")
 [node name="FrontLeftWheel" type="RayCast3D" parent="WheelRaycasts"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.75, 0, 1)
 script = ExtResource("2_pf2xc")
+is_front_wheel = true
 
 [node name="FrontRightWheel" type="RayCast3D" parent="WheelRaycasts"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.75, 0, 1)
 script = ExtResource("2_pf2xc")
+is_front_wheel = true
 
 [node name="RearLeftWheel" type="RayCast3D" parent="WheelRaycasts"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.75, 0, -1)
