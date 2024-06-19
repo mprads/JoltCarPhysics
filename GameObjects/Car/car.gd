@@ -4,17 +4,17 @@ class_name Car
 @export var debug := false
 
 @export_category("Car Values")
-@export var engine_power := 2.0
-@export var drag := 10.0
-@export var steering_angle := 30.0
-@export var front_wheel_grip := 2.0
-@export var rear_wheel_grip := 2.0
+@export var engine_power := 50.0
+@export var drag := 5.0
+@export var steering_angle := 45.0
+@export var front_wheel_grip := 0.5
+@export var rear_wheel_grip := 0.2
 
 @export_category("Suspension Values")
-@export var suspension_resting_length := 0.5
-@export var suspension_strength := 10.0
-@export var suspension_damper := 2.0
-@export var wheel_radius := 0.5
+@export var suspension_resting_length := 0.6
+@export var suspension_strength := 500.0
+@export var suspension_damper := 30.0
+@export var wheel_radius := 0.3
 
 @onready var front_left_wheel: Wheel = $WheelRaycasts/FrontLeftWheel
 @onready var front_right_wheel: Wheel = $WheelRaycasts/FrontRightWheel
